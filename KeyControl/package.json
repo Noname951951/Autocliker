@@ -102,4 +102,15 @@
   "optionalDependencies": {
     "bufferutil": "^4.0.8"
   }
+"build": {
+  "appId": "com.keycontrol.app",
+  "productName": "KeyControl",
+  "files": [
+    "dist/",
+    "electron-main.js"
+  ],
+  "win": {
+    "target": "nsis"
+  }
 }
+
