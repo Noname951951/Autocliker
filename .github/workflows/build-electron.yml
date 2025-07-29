@@ -34,5 +34,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: KeyControl-Windows
-          path: KeyControlee/dist/*.exe
+          path: KeyControl/dist/*.exe
 
