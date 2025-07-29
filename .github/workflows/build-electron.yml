@@ -19,16 +19,16 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: cd KeyControlee && npm install
+        run: cd KeyControl && npm install
 
       - name: Build web app
-        run: cd KeyControlee && npm run build
+        run: cd KeyControl && npm run build
 
       - name: Install Electron Builder
-        run: cd KeyControlee && npm install electron-builder --save-dev
+        run: cd KeyControl && npm install electron-builder --save-dev
 
       - name: Build Electron app
-        run: cd KeyControlee && npx electron-builder --win --x64
+        run: cd KeyControl && npx electron-builder --win --x64
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
