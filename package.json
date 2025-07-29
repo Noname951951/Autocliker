@@ -5,14 +5,13 @@
   "license": "MIT",
   "description": "Desktop application for KeyControl, built with Electron and React.",
   "author": "Your Name <your.email@example.com>",
-  "main": "electron-main.js",  // Toto je hlavní vstupní bod pro Electron
-  "scripts": {
+  "main": "electron-main.js",  
     "dev": "NODE_ENV=development tsx server/index.ts",
     "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
     "start": "NODE_ENV=production node dist/index.js",
     "check": "tsc",
     "db:push": "drizzle-kit push",
-    "electron-build": "electron-builder --win --x64" // Nový skript pro Electron build
+    "electron-build": "electron-builder --win --x64" 
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -112,12 +111,12 @@
     "appId": "com.keycontrol.app",
     "productName": "KeyControl",
     "files": [
-      "dist/**/*", // Zahrne všechny soubory z frontend buildu
-      "electron-main.js" // Hlavní soubor Electronu
+      "dist/**/*", 
+      "electron-main.js" 
     ],
     "directories": {
-      "buildResources": "resources", // Volitelně, pokud máte extra zdroje
-      "output": "release" // Kam se bude ukládat hotový installer/balíček
+      "buildResources": "resources", 
+      "output": "release" 
     }
   }
 }
