@@ -31,7 +31,7 @@ jobs:
         run: npx electron-builder --win --x64
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: KeyControl-Windows
           path: dist/*.exe
