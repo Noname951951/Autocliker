@@ -1,1 +1,38 @@
+name: Build Electron App
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build web app
+        run: npm run build
+
+      - name: Install Electron Builder
+        run: npm install electron-builder --save-dev
+
+      - name: Build Electron app
+        run: npx electron-builder --win --x64
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: KeyControl-Windows
+          path: dist/*.exe
 
