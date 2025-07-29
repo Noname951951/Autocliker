@@ -5,7 +5,7 @@
   "license": "MIT",
   "description": "Desktop application for KeyControl, built with Electron and React.",
   "author": "Your Name <your.email@example.com>",
-  "main": "electron-main.js",
+  "main": "electron-main.cjs",  // Změněno z .js na .cjs
   "scripts": {
     "dev": "NODE_ENV=development tsx server/index.ts",
     "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
@@ -113,7 +113,7 @@
     "productName": "KeyControl",
     "files": [
       "dist/**/*",
-      "electron-main.js"
+      "electron-main.cjs" // Změněno z .js na .cjs
     ],
     "directories": {
       "buildResources": "resources",
