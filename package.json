@@ -1,12 +1,28 @@
-"build": {
-  "appId": "com.keycontrol.app",
-  "productName": "KeyControl",
-  "files": [
-    "dist/",
-    "electron-main.js"
-  ],
-  "win": {
-    "target": "nsis"
+{
+  "name": "autoclicker",
+  "version": "1.0.0",
+  "description": "An automated clicking tool.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^25.0.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^23.0.0"
+  },
+  "build": {
+    "appId": "com.example.autoclicker",
+    "mac": {
+      "category": "your.app.category"
+    },
+    "win": {
+      "target": "nsis"
+    }
   }
 }
-
