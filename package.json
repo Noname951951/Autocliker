@@ -113,7 +113,7 @@
     "productName": "KeyControl",
     "files": [
       "dist/**/*",
-      "electron-main.cjs" // Změněno z .js na .cjs
+      "electron-main.cjs"
     ],
     "directories": {
       "buildResources": "resources",
