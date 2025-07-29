@@ -28,10 +28,10 @@ jobs:
         run: npm install electron-builder --save-dev
 
       - name: Build Electron app
-        run: npx electron-builder --win --x64
+        run: npx electron-builder --win --x64 --publish never # <-- Zde je klíčová změna
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: KeyControl-Windows
-          path: dist/*.exe
+          path: release/*.exe # <-- Změněna cesta k artefaktu na 'release' složku
