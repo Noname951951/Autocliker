@@ -1,4 +1,4 @@
-{
+ee{
   "name": "rest-express",
   "version": "1.0.0",
   "type": "module",
@@ -119,6 +119,6 @@
       "buildResources": "resources",
       "output": "release"
     },
-    "publish": "never" // <-- Přidána tato řádka
+    "publish": "never"
   }
 }
